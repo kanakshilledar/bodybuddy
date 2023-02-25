@@ -18,7 +18,8 @@ static char *greet = "Welcome on board! Your device UID is ";
 static const char *uid = "l33tc0de";
 Twilio *twilio;
 
-void setup() {
+void init_message() {
+  // remove the code for wifi setup in the main file
   Serial.begin(115200);
   Serial.print("Connecting to WiFi network ;");
   Serial.print(ssid);
@@ -45,7 +46,7 @@ void setup() {
   }
 }
 
-void loop() {
+void alert_message() {
   int alert = 1;
   strcat(critical, uid);
   if (alert) {
